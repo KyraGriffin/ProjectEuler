@@ -2,7 +2,7 @@
 ##
 ## Script name: Multiples of 3 or 5 -- Problem 1 
 ##
-## Purpose of script:If we list all the natural numbers below $10$ that are 
+## Purpose of script:If we list all the natural numbers below 10 that are 
 ##  multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
 ##  Find the sum of all the multiples of 3 or 5 below 1000.
 ##
@@ -28,3 +28,18 @@ require(tidyverse)
 require(data.table)
 
 ## ---------------------------
+
+topNum = 1000
+sumMultiples <- 0
+
+for (i in 1:topNum){
+  if(i %% 3 == 0 | i %% 5 ==0 & i < topNum){
+    # print(i)
+    sumMultiples <- sumMultiples + i
+  }
+}
+
+print(sumMultiples)
+
+
+
